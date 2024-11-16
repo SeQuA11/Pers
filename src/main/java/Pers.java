@@ -8,7 +8,7 @@ public class Pers {
         // Генерируем возраст от 15 до 50 лет
         Age = rnd.nextInt(15, 51);
         // и здоровье, от 10% до 100%
-        Health = rnd.nextInt(10, 101);
+        Hp = rnd.nextInt(10, 101);
         //
         Mana = rnd.nextInt(10, 101);
 
@@ -17,20 +17,13 @@ public class Pers {
     // беззнаковое целое число, содержащая возраст
     private int Age;
     // беззнаковое целое число, отражающее уровень здоровья
-    private int Health;
+    private int Hp;
     //
     private int Mana;
     //
     private boolean Pol;
-    //
-    private boolean remake;
 
-    public boolean Remake(String yesno) {
-        if (yesno == "Yes" || yesno == "Y" || yesno == "yes" || yesno == "y") {
-            return false;
-        }
-        return remake;
-    }
+
     //
     public String Species (int _species) {
         // объявляем переменную, в которой мы будем хранить строку
@@ -67,5 +60,11 @@ public class Pers {
         return str;
     }
 
+    public String Pol (String pol) {
+        if (pol == "w" || pol == "W") {
+            return "women";
+        }
+        return "man";
+    }
 
 }
