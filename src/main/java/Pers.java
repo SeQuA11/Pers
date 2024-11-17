@@ -5,24 +5,26 @@ public class Pers {
 
     // конструктор класса (данная функция вызывается // при создании нового экземпляра класса
     public Pers(String user_command) {
-        // Генерируем возраст от 15 до 50 лет
-        Age = rnd.nextInt(15, 51);
-        // и здоровье, от 10% до 100%
-        Hp = rnd.nextInt(10, 101);
-        //
-        Mana = rnd.nextInt(10, 101);
 
     }
 
-    // беззнаковое целое число, содержащая возраст
-    private int Age;
-    // беззнаковое целое число, отражающее уровень здоровья
-    private int Hp;
-    //
-    private int Mana;
-    //
-    private boolean Pol;
+    // Генерируем возраст от 15 до 50 лет
+    public int Age() {
+        System.out.println(rnd.nextInt(15, 51));
+        return rnd.nextInt(15, 51);
+    }
 
+    //
+    public int HP() {
+        System.out.println(rnd.nextInt(10, 101));
+        return rnd.nextInt(10, 101);
+    }
+
+    //
+    public int Mana() {
+        System.out.println(rnd.nextInt(10, 101));
+        return rnd.nextInt(10, 101);
+    }
 
     //
     public String Species (int _species) {
